@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">سَنا | نحو مستقبل مستدام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-img-wrapper">
+                <img src="sana-logo.png" alt="Sana Logo">
+            </div>
+            <span id="logo-text">سَنا</span>
+        </a>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="nav-cta">ابدأ مجاناً</button>
+            <a href="#" id="login-link" class="login-link">تسجيل الدخول</a>
+            
+            
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i data-lucide="sun-moon" size="20"></i>
+            </button>
+            <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</button>
+            
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle-container">
+                <span class="line-decorator"></span>
+                <span id="hero-subtitle">نحو مستقبل مستدام</span>
+            </div>
+            <h1 id="hero-title">وفّر <span class="gradient-text">أكثر</span>،<br>استهلك أقل</h1>
+            <p id="hero-desc">سَنا نظام ذكي لمراقبة استهلاك الكهرباء والمياه. تحكّم في فواتيرك، تلقَّ تنبيهات فورية، واكسب مكافآت على توفيرك.</p>
+            
+            <div class="hero-btns" id="hero-btns">
+                <button class="btn btn-primary main-cta-btn">
+                    <span id="cta-main">ابدأ مجاناً الآن</span>
+                    <i data-lucide="arrow-left" id="cta-icon"></i>
+                </button>
+                <button class="btn btn-secondary" id="cta-secondary">
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-badge"><i data-lucide="shield-check" size="18" color="#10b981"></i> <span id="badge1">بدون رسوم خفية</span></div>
+                <div class="trust-badge"><i data-lucide="lock" size="18" color="#10b981"></i> <span id="badge2">آمن ومشفر</span></div>
+                <div class="trust-badge"><i data-lucide="smartphone" size="18" color="#10b981"></i> <span id="badge3">متوافق مع الجميع</span></div>
+            </div>
+        </div>
+
+        <div class="dashboard-wrapper">
+            <div class="floating-badge" id="float-1" style="top: -20px; left: -10px;">
+                <i data-lucide="trophy" size="18" color="#fbbf24"></i>
+                <span>نقاط الاستدامة ٧٨٪</span>
+            </div>
+           <div class="floating-badge" id="float-2" style="bottom: -20px; right: -20px;">
+    <i data-lucide="leaf" size="18" color="#10b981"></i>
+    <span>+٨ ساعات تطوعية</span>
+</div>
+            
+            <div class="main-card" id="interactive-card">
+                <div class="card-header">
+                    <div>
+                        <h3 id="dash-title">لوحة تحكم سَنا</h3>
+                        <p id="dash-date">فبراير ٢٠٢٦</p>
+                    </div>
+                    <div class="status-dot"></div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            <i data-lucide="zap" size="14"></i> <span id="stat-elec">الكهرباء</span>
+                        </div>
+                        <span class="val" id="val-elec">٧٥٠ <small>kWh</small></span>
+                        <div class="stat-sub primary-text" id="stat-elec-sub">-١٢٪ هذا الشهر</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            <i data-lucide="droplets" size="14"></i> <span id="stat-water">المياه</span>
+                        </div>
+                        <span class="val" id="val-water">٢,٨٥٠ <small>L</small></span>
+                        <div class="stat-sub secondary-text" id="stat-water-sub">-٨٪ هذا الشهر</div>
+                    </div>
+                </div>
+
+                <div id="usage-title" class="usage-label">الاستهلاك الشهري</div>
+                <div class="chart-container">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                    <div class="bar bar-4"></div>
+                    <div class="bar bar-5 highlight"></div>
+                    <div class="bar bar-6"></div>
+                </div>
+
+                <div class="alert-box">
+                    <i data-lucide="alert-triangle" size="18"></i>
+                    <div id="alert-text">ارتفاع في الاستهلاك خلال يوليو — تحقق الآن</div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section brand-info">
+            <div class="footer-logo">
+                <div class="logo-img-wrapper">
+                    <img src="sana-logo.png" alt="Sana Logo" width="40">
+                </div>
+                <strong id="footer-brand">سَنا — Sana</strong>
+            </div>
+            <p id="footer-tagline">نبتكر حلولاً ذكية لمستقبل مستدام، نساعدك على مراقبة استهلاكك للكهرباء والمياه بكل سهولة ودقة.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:info@sana.sa" id="footer-email-link">
+                    <i data-lucide="mail"></i> <span id="footer-email">info@sana.sa</span>
+                </a>
+               <!--  <a href="tel:+966546895456" dir="ltr">
+                    <i data-lucide="phone"></i> <span id="footer-phone">+966 546 895 456</span>
+                </a> -->
+                <a href="#">
+                    <i data-lucide="map-pin"></i> <span id="footer-location">مكة، المملكة العربية السعودية</span>
+                </a>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" aria-label="X"><i data-lucide="X"></i></a>
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+  <!--   <div class="footer-bottom">
+        <p id="footer-copy">© ٢٠٢٦ سَنا. جميع الحقوق محفوظة.</p>
+    </div> -->
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
